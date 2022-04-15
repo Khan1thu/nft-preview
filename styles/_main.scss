@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-BG;
+
+    .wrapper{
+        border: 0px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        border-radius: 15px;
+        background-color: $card-BG;
+    }
+
+    .top{
+        position: relative;
+        img{
+            width: 17rem;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .image-overlay{
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background-color: $Cyan;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           opacity: 0;
+           transition: opacity 0.25s;
+
+           .view{
+               width: 3rem;
+           }
+        }
+
+
+       .image-overlay:hover{
+           opacity: 0.7;
+           cursor: pointer;
+       }
+    }  
+
+    .middle{
+        color: white;
+
+        h1{
+            font-size: 1.3rem;
+        }
+
+        h1:hover{
+            color: $Cyan;
+            cursor: pointer;
+        }
+
+        p{
+            font-size: 1rem;
+            color: $Soft-blue;
+        }
+
+        .middle-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            font-size: 0.7rem;
+            text-align: center;
+
+            .ETH{
+                color: $Cyan;
+            }
+
+            .ETH::before{
+                content: url("../images/icon-ethereum.svg");
+            }
+
+            .clock{
+                color: $Soft-blue;
+            }
+            .clock::before{
+                content: url("../images/icon-clock.svg");
+            }
+        }
+    }
+
+    hr{
+        width: 90%;
+        background-color: $line;
+    }
+
+    .bottom{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        img{
+            width: 1.5rem;
+            border: 1px solid white;
+            border-radius: 50%;
+            margin: 1rem;
+        }
+        p{
+            color: $Soft-blue;
+
+            span{
+                color: white;
+            }
+
+            span:hover{
+                color: $Cyan;
+                cursor: pointer;
+            }
+        }
+    }
+}
